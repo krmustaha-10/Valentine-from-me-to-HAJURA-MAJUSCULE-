@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Soft pink gradient */
+    color: #4a4a4a;
+    overflow: hidden; /* Hide scrollbars, good for mobile */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* For hidden letter card */
+}
+
+.card {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; /* Make it unclickable when hidden */
+    position: absolute; /* To allow other card to show */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 20px; /* Match container padding */
+    overflow-y: auto; /* Allow scrolling for long letters */
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #d81b60; /* Deep pink */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #e91e63; /* Brighter pink */
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#yes-btn {
+    background-color: #ff4081; /* Accent pink */
+    color: white;
+}
+
+#yes-btn:hover {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+}
+
+#no-btn {
+    background-color: #f0f0f0;
+    color: #e91e63;
+    position: relative; /* For the moving effect */
+    transition: all 0.3s ease; /* Ensure smooth movement */
+}
+
+#no-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Letter Card Styles */
+.letter-card {
+    text-align: left;
+}
+
+.letter-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.letter-text {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.05em;
+}
+
+.flowers-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.flowers-section p {
+    font-weight: 600;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.flower-icon {
+    width: 70px; /* Smaller icon size */
+    height: 70px;
+    margin: 0 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffcad4; /* Light pink border */
+}
+
+.restart-btn {
+    background-color: #9c27b0; /* Purple accent */
+    color: white;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.restart-btn:hover {
+    background-color: #7b1fa2;
+}
